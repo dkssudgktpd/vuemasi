@@ -157,7 +157,8 @@ window.onload = function () {
     },
 
     pagination: {
-      el: '.sw-items-pg'
+      el: '.sw-items-pg',
+      clickable: true
     }
 
   });
