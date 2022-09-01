@@ -107,6 +107,32 @@ export default {
 </script>
 
 <style>
+.sw-items-control {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  z-index: 9;
+}
+
+.sw-items-pg .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.sw-items-pg .swiper-pagination-bullet-active {
+  width: 30px;
+  opacity: 1;
+}
+</style>
+
+<style scoped>
 /* items */
 .items {
   position: relative;
@@ -239,29 +265,7 @@ export default {
   cursor: pointer;
 }
 
-.sw-items-control {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  z-index: 9;
-}
 
-.sw-items-pg .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  opacity: 0.5;
-  margin: 0 5px;
-  border-radius: 5px;
-  transition: all 0.5s;
-}
-
-.sw-items-pg .swiper-pagination-bullet-active {
-  width: 30px;
-  opacity: 1;
-}
 
 /* 링크 */
 
