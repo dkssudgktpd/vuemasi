@@ -33,10 +33,13 @@
 
 <script>
 import $ from 'jquery';
-import {onMounted} from 'vue';
+import {onMounted, computed} from 'vue';
+import {useStore} from 'vuex'
 export default {
-  props: ['menudata'],
+
   setup(){
+    const store = useStore();
+    const menudata = computed(()=>store.getters.getMenuData)
     onMounted(() => {
       
   let header = $('.header');
@@ -66,7 +69,9 @@ export default {
   });
 
     })
-    return{}
+    return{
+      menudata
+    }
   }
 }
 </script>
