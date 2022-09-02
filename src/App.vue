@@ -1,6 +1,7 @@
 <template>
   <div class="wrap">
   <GoTop/>
+  <ModalView/>
   <MobileMenu/>
   <FixMenu/>
   <HeaderView/>
@@ -16,6 +17,7 @@
 
 
 import GoTop from '@/components/GoTop.vue';
+import ModalView from '@/components/ModalView.vue';
 import MobileMenu from '@/components/MobileMenu.vue';
 import FixMenu from '@/components/FixMenu.vue';
 import HeaderView from '@/components/HeaderView.vue';
@@ -32,7 +34,7 @@ import FooterView from '@/components/FooterView.vue';
 import {useStore} from 'vuex'
 export default {
   name : 'App',
-  components : {GoTop,MobileMenu,FixMenu,HeaderView,VisualView,ItemsView,BeverageView,FranchView,FooterView},
+  components : {GoTop,ModalView,MobileMenu,FixMenu,HeaderView,VisualView,ItemsView,BeverageView,FranchView,FooterView},
   setup(){
     // 외부에 있는 menu.json 파일을 불러오기위해 actions를 활용
     const store = useStore();
