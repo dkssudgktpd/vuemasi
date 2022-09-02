@@ -25,13 +25,21 @@ import BeverageView from '@/components/BeverageView.vue';
 import FranchView from '@/components/FranchView.vue';
 import FooterView from '@/components/FooterView.vue';
 
+
+// 공통으로 관리되는 state를 참조한다.
+// 여기서는 actions를 호출하는 용도로 사용.
+// vuex를 참조하는 객체를 접근하려고 하면 아래 구문으로 접근
+import {useStore} from 'vuex'
 export default {
   name : 'App',
   components : {GoTop,MobileMenu,FixMenu,HeaderView,VisualView,ItemsView,BeverageView,FranchView,FooterView},
   setup(){
-    // 메뉴 데이터
-
-
+    // 외부에 있는 menu.json 파일을 불러오기위해 actions를 활용
+    const store = useStore();
+    // actions의 method(function 기능)을 사용할때,
+    // store.dispatch('메소드명')
+    console.log('step 1 : dispatch')
+    store.dispatch('fetchMenudata')
     return{
 
     }
