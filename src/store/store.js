@@ -11,10 +11,9 @@ export default createStore({
     // 메뉴 데이터 json 로딩
     fetchMenudata({commit}){
 
-      axios.get('/data/menu.json')
+      axios.get('./data/menu.json')
       .then(response => {
         // 서버 또는 파일이 결과가 있을때
-        console.log('step 2 : axios', response.data)
         commit('MENU_DATA_INIT', response.data);
         // context.commit()
       })
@@ -25,13 +24,11 @@ export default createStore({
   mutations : {
     MENU_DATA_INIT(state, payload){
       state.menuData = payload
-      console.log('step 3 : mutation', payload)
     }
   },
   // state를  컴포넌트에 전달, 출력 자리
   getters : {
     getMenuData(state){
-      console.log('step 4 : getters')
       return state.menuData;
     }
   }

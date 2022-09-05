@@ -21,7 +21,7 @@
             delay: 1000,
             disableOnInteraction: false
           }"
-          :loop="true"
+          :loop= "true"
           :navigation="{
             nextEl : '.sw-items-next',
             prevEl : '.sw-items-prev'
